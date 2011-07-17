@@ -1,8 +1,10 @@
 # Hash4hash
 
-NilClass.class_eval do
-  def value4hash
-    inspect
+[TrueClass, FalseClass, NilClass].each do |cl|
+  cl.class_eval do
+    def value4hash
+      inspect
+    end
   end
 end
 
